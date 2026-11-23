@@ -6,7 +6,7 @@
 -->
 
 <head>
-    <title>Bootstrap Examples</title>
+    <title>Pink Accesibility Page</title>
 
     <!-- Homepage meta data -->
     <meta charset="utf-8">
@@ -35,21 +35,57 @@
         footer {
             font-size: 12px;
             text-align: center;
+             background: #ff5982;
         }
         
         .demo-content {
             padding: 15px;
             font-size: 18px;
-            background: #dbdfe5;
+            background: #ff9fcc;
             margin-bottom: 15px;
         }
         
         .demo-content.bg-alt {
-            background: #abb1b8;
+            background: #fe6b90;
         }
+        .bg-primary-subtle {
+    background-color: #fe6b90 !important;
+}
+        .hidden {
+    display: none;
+     background: #fe6b90; 
+}
+
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus,a.skip-main:active {
+    color: #ff589e;
+    background-color: #000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 5px;
+    border-radius: 15px;
+    border: 4px solid rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+} 
     </style>
 
     <body>
+        <a class="skip-main" tabindex="0" href="#main">Skip to main content</a>
         <!---------------------------------- Begin the nav-bar ----------------------------------->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
@@ -95,10 +131,12 @@
             <p class="lead"> Let's look at the man different examples of how we can use bootstrap and what bootstrap can do!
             </p>
         </header>
-
+ <div id="main" class="hidden" tabindex="-1"></div> 
         <main>
+          
             <!---------Three Column Layouts------------------------------------>
-            <div class="container mt-3">
+            <p tabindex="0"> </p> 
+            <div class="container mt-3" tabindex="0" >
                 <!--Row with two equal columns-->
                 <div class="row">
                     <div class="col-md-6">
@@ -109,7 +147,7 @@
                     </div>
                 </div>
                 <!--Row with two columns divided in 1:2 ratio-->
-                <div class="row">
+                <div class="row" tabindex="0" >
                     <div class="col-md-4">
                         <div class="demo-content">.col-md-4</div>
                     </div>
@@ -163,9 +201,15 @@
             <div class="container mt-3 vstack" name="form-button">
             </div>
         </main>
+        <div class="SEO">
+            <a href="https://juicycouture.com" target="_blank">Juicy Couture</a>
+            <a href="https://www.missme.com" target="_blank">Miss Me</a>
+            <a href="https://www.truereligion.com" target="_blank">True Religion</a>
+        </div>
 
         <!---------------------------------- Begin the footer ------------------------------------->
         <footer>
+            <p tabindex="0"> </p> 
             <span class="title">Example of a Footer Title</span>
             <div class="container py-4" id="footerTable">
                 <ul class="list-unstyled d-flex justify-content-center">
